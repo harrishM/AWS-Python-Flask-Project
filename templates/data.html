@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<h1>Harrish Murugesan</h1>
+<h2>Student ID:1001709103</h2>
+<!--
+{{time}}
+-->
+<form method="POST">
+<table>
+  <tr>
+   <th> Lat Range </th>
+   <th>  Count </th>
+   {%for latRange,count in zipped_values%}
+   <tr>
+     <td> {{latRange}} </td>
+     <td> {{count}}</td>
+   </tr>
+     {%endfor%}
+ </table>
+
+{{data}}
+
+</form>
+</html>

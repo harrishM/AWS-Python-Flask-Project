@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <div class="ct-chart ct-perfect-fourth"></div>
+
+ <!--
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+
+ -->
+
+    <h1>Harrish Murugesan</h1>
+    <h2>Student ID:1001709103</h2>
+    <!--
+    {{time}}
+    -->
+
+    <div> 
+        <span>1</span>
+         
+    </div>
+
+<button>reset</button>
+    <script>
+        var wrapper, value, timer;
+
+window.addEventListener('load', startCounter, false);
+
+function startCounter(){
+    document.querySelector('button').onclick = startCounter;
+    wrapper = document.querySelector('span');
+    value = 0;
+    count();
+}
+
+function count(){
+    clearTimeout(timer);
+    value++;
+    wrapper.innerHTML = value;
+    if(value < 100){ timer = setTimeout(count,1000); }
+}
+    </script>
+    
+    <form method="POST">
+        
+        <p>
+            <label for="Minimum Magnitued">minMag</label>
+            <input type="text" name="minMag">
+        </p>
+        <p>
+            <label for="Maximum Magnitude">maxMag</label>
+            <input type="text" name="maxMag">
+        </p>
+
+        <p>
+            <label for="net value">"net" value(i.e us)</label>
+            <input type="text" name="netValue">
+        </p>
+    
+
+        <p>
+            <label for="Range Of Mags">Interval of? </label>
+            <input type="text" name="interval_of_mags">
+        </p>
+
+        <p>
+            <input type="submit">
+        </p>
+    </form>
+    
+
+    
+    
+ 
+</body>
+</html>
